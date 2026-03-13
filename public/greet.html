@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting</title>
+
+    <style>
+        body {
+            background: #0f172a;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 40px;
+            width: 400px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        a {
+            color: #a78bfa;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1 id="greeting">Hello!</h1>
+
+    <a href="/">Go Back</a>
+</div>
+
+<script>
+fetch('/api/name')
+.then(res => res.json())
+.then(data => {
+    document.getElementById('greeting').innerText = "Hello, " + data.name + "!";
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: #0f172a;
+            color: white;
+        }
+
+        .box {
+            width: 400px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 20px;
+            background: #1e293b;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            width: 86%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #6366f1;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Welcome</h1>
+        <p>Please enter your name to receive a greeting.</p>
+
+        <form action="/submit-name" method="POST">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <br>
+            <button type="submit">Get Greeting</button>
+        </form>
+    </div>
+</body>
+</html>
